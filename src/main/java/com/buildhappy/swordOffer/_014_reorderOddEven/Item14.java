@@ -39,7 +39,7 @@ public class Item14 {
 				high--;
 			} else if ((array[low] & 0X1) == 1) {// 如果low位置上的为奇数，low后移
 				low++;
-			} else// high位置上的为偶数，high前移
+			} else// high位置上的值为偶数，high前移
 				high--;
 		}
 	}

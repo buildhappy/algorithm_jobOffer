@@ -57,6 +57,5 @@ public class Item24 {
 			rightBool = verifySquenceOfBST(right);
 		}
 		return (leftBool && rightBool);
-
 	}
 }

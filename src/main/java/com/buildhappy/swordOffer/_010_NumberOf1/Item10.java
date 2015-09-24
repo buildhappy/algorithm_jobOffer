@@ -10,13 +10,13 @@ package com.buildhappy.swordOffer._010_NumberOf1;
  */
 public class Item10 {
 	public static void main(String args[]) {
-		int n = 121;
+		int n = -121;
 		String byts = Integer.toBinaryString(n);
 		System.out.println(byts);
 		System.out.println(n + "的二进制表示中1的个数为：" + numberOf1(n));
-		System.out.println(numberOf1MoveRight(n));
+		System.out.println("右移的统计结果：" + numberOf1MoveRight(n));
+		System.out.println("左移的统计结果：" + numberOf1MoveLeft(n));
 	}
-	
 	/**
 	 * 利用了与的操作(高效的算法)
 	 * 每次经过 n=n&(n-1) ，1的个数少一个；最后为0
@@ -26,11 +26,11 @@ public class Item10 {
 	 */
 	public static int numberOf1(int n) {
 		int count = 0;
-
 		while(n != 0) {
 			//if((n & 0X1) == 1) count++;
 			count++;
 			n = (n - 1) & n;
+			//System.out.println(Integer.toBinaryString(n));
 		}
 		return count;
 	}
@@ -38,18 +38,20 @@ public class Item10 {
 
 	/**
 	 * 方法二：左移标志数字flag
-	 * 用于负数和正数(有问题)
+	 * 用于负数和正数
 	 * @param testNum
 	 * @return
 	 */
 	private static int numberOf1MoveLeft(int testNum) {
+		//System.out.println("测试数据二进制：" + Integer.toBinaryString(testNum));
 		int cnt = 0, flag = 1;
 		while (flag >= 0) {//32位的整数要循环32次
-			if ((testNum&flag) >= 0) {
+			if ((testNum & flag) > 0) {
 				cnt++;
 			}
 			flag = flag << 1;
 		}
+		if(testNum < 0) cnt++;
 		return cnt;
 	}
 	

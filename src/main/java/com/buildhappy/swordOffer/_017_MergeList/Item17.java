@@ -46,20 +46,18 @@ public class Item17 {
 	
 	/**
 	 * 合并两个链表
-	 * @param head1链表1
-	 * @param head2链表2
+	 * @param head1 链表1
+	 * @param head2 链表2
 	 * @return
 	 */
 	public static ListNode mergeList(ListNode head1, ListNode head2) {
-		ListNode head = null;// 合并后的头指针
+		ListNode head = null;//合并后的头指针
 
 		// 如果有一个为空，则为另一个链表
-		if (head1 == null) {
+		if (head1 == null)
 			head = head2;
-		}
-		if (head2 == null) {
+		if (head2 == null)
 			head = head1;
-		}
 
 		// 两个都不为空
 		if (head1 != null && head2 != null) {
@@ -80,7 +78,7 @@ public class Item17 {
 	/**
 	 * 打印链表
 	 * 
-	 * @param head头指针
+	 * @param head 头指针
 	 */
 	public static void printList(ListNode head) {
 		ListNode current = head;

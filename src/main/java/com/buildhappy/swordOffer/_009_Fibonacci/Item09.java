@@ -42,7 +42,6 @@ public class Item09 {
 	 * @return
 	 */
 	private static int fiboRecursion(int n) {
-		
 		if(0 == n){
 			return 0;
 		}
@@ -51,12 +50,11 @@ public class Item09 {
 		}else {
 			return fiboRecursion(n-1)+fiboRecursion(n-2);
 		}
-		
 	}
 	
 	/**
 	 * 将中间结果存储。O(n)
-	 * @param i
+	 * @param n
 	 * @return
 	 */
 	private static int fiboTimeN(int n) {
@@ -66,7 +64,6 @@ public class Item09 {
 		for (int i = 2; i <= n; i++) {
 			fibArr[i] = fibArr[i-1] + fibArr[i-2];
 		}
-		
 		return fibArr[n];
 	}
 }

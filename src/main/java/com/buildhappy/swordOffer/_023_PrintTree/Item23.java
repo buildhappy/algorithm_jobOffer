@@ -47,8 +47,7 @@ public class Item23 {
 
 	/**
 	 * 层次遍历
-	 * 
-	 * @param root根结点
+	 * @param root 根结点
 	 */
 	public static void printFromTopToBottom(BinaryTreeNode root) {
 		//使用队列的形式

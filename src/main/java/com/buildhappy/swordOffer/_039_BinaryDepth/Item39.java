@@ -50,7 +50,7 @@ public class Item39 {
 	/**
 	 * 计算二叉树的深度（递归实现），广度优先遍历
 	 * 注意与19题的深度优先遍历的比较
-	 * @param root根结点
+	 * @param root 根结点
 	 * @return深度
 	 */
 	public static int treeDepth_iterator(BinaryTreeNode root) {
@@ -68,7 +68,7 @@ public class Item39 {
 	/**
 	 * 计算二叉树的深度（非递归），广度优先遍历
 	 * 注意与19题的深度优先遍历的比较
-	 * @param tree
+	 * @param root
 	 */
 	public static int treeDepth(BinaryTreeNode root){
 		if(root == null) return 0;
@@ -88,7 +88,8 @@ public class Item39 {
 				queue.offer(node.getRight());
 				rightDepth++;
 			}
-			depth = (rightDepth > leftDepth) ? rightDepth : leftDepth;
+//			depth = (rightDepth > leftDepth) ? rightDepth : leftDepth;
+			depth = Math.max(rightDepth , leftDepth);
 		}
 		return depth;
 	}
@@ -111,7 +112,7 @@ public class Item39 {
 	
 	/**
 	 * 层次遍历（广度优先）
-	 * @param root根结点
+	 * @param root 根结点
 	 */
 	public static void printFromTopToBottom(BinaryTreeNode root) {
 		//使用队列的形式

@@ -33,7 +33,7 @@ public class Item16 {
 
 	/**
 	 * 非递归实现
-	 * @param head头指针
+	 * @param head 头指针
 	 */
 	public static ListNode reverseList(ListNode head) {
 		/*

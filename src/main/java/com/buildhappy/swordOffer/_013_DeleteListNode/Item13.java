@@ -56,9 +56,8 @@ public class Item13 {
 
 	/**
 	 * 狸猫换太子删除结点
-	 * 
-	 * @param head头指针
-	 * @param toBeDeleted要删除的指针
+	 * @param head 头指针
+	 * @param toBeDeleted 要删除的指针
 	 */
 	public static void deleteNode(ListNode head, ListNode toBeDeleted) {
 		if (head == null || toBeDeleted == null) {

@@ -3,8 +3,9 @@ package com.buildhappy.swordOffer._019_BinaryTree;
 import java.util.Stack;
 
 /**
- * 求二叉树的距离 计算一个二叉树的最大距离有两个情况: 情况A: 路径经过左子树的最深节点，通过根节点，再到右子树的最深节点。 情况B:
- * 路径不穿过根节点，而是左子树或右子树的最大距离路径，取其大者。
+ * 求二叉树的距离 计算一个二叉树的最大距离有两个情况:
+ *   情况A: 路径经过左子树的最深节点，通过根节点，再到右子树的最深节点。
+ *   情况B: 路径不穿过根节点，而是左子树或右子树的最大距离路径，取其大者。
  * 
  * @author buildhappy
  *
@@ -13,8 +14,8 @@ public class TreeDistance {
 	public static int maxDistance = 0;
 
 	/**
-	 * 递归的方式实现（深度优先遍历） 注意与39题的广度优先遍历的比较
-	 * 
+	 * 法一：递归的方式实现（深度优先遍历）
+	 * 注意与39题的广度优先遍历的比较
 	 * @param root
 	 */
 	public static void maxDistance_iterator(TreeNode root) {
@@ -33,10 +34,8 @@ public class TreeDistance {
 		}
 	}
 
-	
-	static Stack<TreeNode> stack = new Stack<TreeNode>();
 	/**
-	 * 非递归的方式实现（深度优先遍历）
+	 * 法二：非递归的方式实现（深度优先遍历）
 	 * 注意与39题的广度优先遍历的比较
 	 * @param root
 	 */
@@ -44,6 +43,7 @@ public class TreeDistance {
 		if (root == null) {
 			return 0;
 		}
+		Stack<TreeNode> stack = new Stack<TreeNode>();
 		stack.push(root);
 		while (!stack.isEmpty()) {
 			TreeNode cur = stack.peek();

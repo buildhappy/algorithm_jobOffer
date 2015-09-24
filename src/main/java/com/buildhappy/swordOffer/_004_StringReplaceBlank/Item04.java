@@ -31,8 +31,8 @@ public class Item04 {
 	
 	/**
 	 * 计算新的字符串
-	 * @param c带空格的字符数组
-	 * @param length是指第一个字符到最后一个字符的长度，不是字符数组的长度
+	 * @param c 带空格的字符数组
+	 * @param length 是指第一个字符到最后一个字符的长度，不是字符数组的长度
 	 * @return
 	 */
 	public static String replaceBlank(char c[], int length) {

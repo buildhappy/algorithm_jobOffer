@@ -28,7 +28,6 @@ public class Item06 {
 		printPostOrder(root);
 		System.out.println();
 		
-		
 		System.out.println("************* test **************");
 		int inOrder2[] = {3,4,2,5,7,6};
 		int inOrder3[] = Arrays.copyOfRange(inOrder2, 4, inOrder2.length);

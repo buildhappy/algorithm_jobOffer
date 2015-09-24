@@ -51,7 +51,6 @@ class CQueue<T> {
 
 	/**
 	 * 模拟在队列末尾插入
-	 * 
 	 * @param node
 	 */
 	public void appendTail(T node) {
@@ -60,7 +59,6 @@ class CQueue<T> {
 
 	/**
 	 * 模拟删除队列的头
-	 * 
 	 * @return
 	 */
 	public T deleteHead() {
