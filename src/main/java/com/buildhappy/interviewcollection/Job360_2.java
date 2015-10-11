@@ -12,7 +12,6 @@ public class Job360_2 {
         //start(n);
         printNum(5);
         printNum(5);
-
     }
     public static void start(int n){
         int[] data = primeFactor(n);
