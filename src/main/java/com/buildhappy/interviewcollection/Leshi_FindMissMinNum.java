@@ -1,15 +1,17 @@
 package com.buildhappy.interviewcollection;
 
+import java.util.Arrays;
+
 /**
  * 求出数组中未出现的最小正整数
  * Created by caijianfu on 15/9/19.
  */
 public class Leshi_FindMissMinNum {
     public static void main(String[] args){
-        int[] data = {-1 , 2, 3, 4};
+        int[] data = {-1 , 2, 3, 4 , 1};
         //int[] data = {1,2,3,4,5};
-        getMinMissNum(data);
-        System.out.println();
+        //getMinMissNum(data);
+        System.out.println(getMinMissNum(data));
     }
     public static int getMinMissNum(int[] data){
         int n = data.length;
@@ -23,6 +25,7 @@ public class Leshi_FindMissMinNum {
                 swap(data , i , data[i] - 1);
             }
         }
+        System.out.println(Arrays.toString(data));
         return i + 1;
     }
 
